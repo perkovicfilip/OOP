@@ -2,12 +2,76 @@
 <html>
   <head>
     <meta charset = "UTF8">
-    <title> Sajt o Samanti</title>
+    <title>Aerodrom Srbija</title>
     <link rel="stylesheet" href="main.css">
+	
+	<script>
+		function testFunction(){
+			document.getElementById("test").innerHTML = "funkcija izvrsena";
+		}
+	</script>
   </head>
   
   <body>
-    <h3>
+	<header>
+		<img src="img/avion.jpg" alt="Avion" width="50" height="50">
+		
+		<nav>
+			<ul>
+				<li> <a href="destinacije.html">Destinacije</a> </li>
+				<li> <a href="kontakt.html">Kontakt</a> </li>
+				<li> <a href="prijava.html">Prijavite se</a> </li>
+			</ul>
+		</nav>		
+	</header>
+	
+	<section>
+	
+		<main class="main_container">
+		
+			<div class="home_item">			
+				<h2>Destinacija 1</h2>
+				<p>Majami</p>
+				<a href="https://www.instagram.com/airserbia/#">LINK</a>
+			</div>
+			
+			<div class="home_item">			
+				<h2>Destinacija 2</h2>
+				<p>Zagreb</p>
+				<button type ="button" onclick="testFunction()">Klikni</button>
+			</div>
+			
+			<div class="home_item">			
+				<h2>Destinacija 3</h2>
+				<p>Sarajevo</p>
+				<p id = "test">
+				...
+				<p>
+			</div>
+			
+		</main>
+		
+		<script>
+			document.getElementById("test").innerHTML = "CAO";
+		</script>
+		
+		
+		
+		<p class ="pocetna_text">
+			Dobrodosli na aerodrom, srecno putavanje! 
+		</p>		
+		
+	</section>
+	
+	<footer>
+		<ul>
+			<li> <a href="https://www.instagram.com/airserbia/#"><img src="img/insta.jpg" alt="Instagram" width="50" height="50"></a>
+			<li> <a href="https://www.facebook.com/airserbia"><img src="img/fb.png" alt="Facebook" width="50" height="50"></a>
+			<li> <a href="https://twitter.com/airserbia"> <img src="img/twitter.png" alt="Twitter" width="50" height="50"></a>
+		</ul>
+	</footer>
+	
+    <!-- <h3>
       Samanta
     </h3>
 
@@ -27,13 +91,13 @@
 
     <a href="https://www.samanta.org.in/blog">Samantin blog</a>
 
-    <ul>
-      <li> <a href="www.instagram.com/samanta">Samantin ig</a> </li>
-      <li> <a href="www.facebook.com/samanta">Samantin fb</a> </li>
-      <li> <a href="www.twitter.com/samanta">Samantin twitter</a> </li>
-    </ul>
+		<ul>
+			<li> <a href="www.instagram.com/airserbia">ig</a> </li>
+			<li> <a href="www.facebook.com/airserbia">fb</a> </li>
+			<li> <a href="www.twitter.com/airserbia">twitter</a> </li>
+		</ul>
 
-    <a href="www.instagram.com"><img src="img/insta.jpg" alt="Instagram od Samante" width="50" height="50"></a>
+    <!-- <a href="www.instagram.com"><img src="img/insta.jpg" alt="Instagram od Samante" width="50" height="50"></a> -->
 
   </body>
 </html>
