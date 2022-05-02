@@ -4,12 +4,8 @@
     <meta charset = "UTF8">
     <title>Aerodrom Srbija</title>
     <link rel="stylesheet" href="main.css">
+	<script src="main.js"></script>
 	
-	<script>
-		function testFunction(){
-			document.getElementById("test").innerHTML = "funkcija izvrsena";
-		}
-	</script>
   </head>
   
   <body>
@@ -17,12 +13,25 @@
 		<img src="img/avion.jpg" alt="Avion" width="50" height="50">
 		
 		<nav>
-			<ul>
+			<ul class ="footer_lista">
 				<li> <a href="destinacije.html">Destinacije</a> </li>
 				<li> <a href="kontakt.html">Kontakt</a> </li>
 				<li> <a href="prijava.html">Prijavite se</a> </li>
 			</ul>
-		</nav>		
+		</nav>	
+		
+			<p>Datum: <span id="datumID"></span></p>
+
+		<script>
+			var datum = new Date();
+			document.getElementById("datumID").innerHTML = datum.toLocaleDateString();
+		</script>
+		
+			<p>Vreme: <span id="vremeID"></span></p>
+
+		<script>			
+			document.getElementById("vremeID").innerHTML = datum.toLocaleTimeString();
+		</script>
 	</header>
 	
 	<section>
@@ -44,6 +53,7 @@
 			<div class="home_item">			
 				<h2>Destinacija 3</h2>
 				<p>Sarajevo</p>
+				<p id="datumiID">Datum:  </p>
 				<p id = "test">
 				...
 				<p>
@@ -64,12 +74,19 @@
 	</section>
 	
 	<footer>
-		<ul>
-			<li> <a href="https://www.instagram.com/airserbia/#"><img src="img/insta.jpg" alt="Instagram" width="50" height="50"></a>
-			<li> <a href="https://www.facebook.com/airserbia"><img src="img/fb.png" alt="Facebook" width="50" height="50"></a>
-			<li> <a href="https://twitter.com/airserbia"> <img src="img/twitter.png" alt="Twitter" width="50" height="50"></a>
+		<ul class ="footer_lista">
+			<li class ="socijalne_mreze"> <a href="https://www.instagram.com/airserbia/#"><img src="img/insta.jpg" alt="Instagram" width="50" height="50"></a>
+			<li class ="socijalne_mreze"> <a href="https://www.facebook.com/airserbia"><img src="img/fb.png" alt="Facebook" width="50" height="50"></a>
+			<li class ="socijalne_mreze"> <a href="https://twitter.com/airserbia"> <img src="img/twitter.png" alt="Twitter" width="50" height="50"></a>
 		</ul>
 	</footer>
+	
+	
+	<script> 
+		MyTest()
+		Datum()
+		testFunction()
+	</script>
 	
     <!-- <h3>
       Samanta
