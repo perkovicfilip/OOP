@@ -2,7 +2,9 @@ function testFunction(){
 			document.getElementById("test").innerHTML = "funkcija izvrsena";
 }
 
-
+var datum = new Date();
+document.getElementById("datumID").innerHTML = datum.toLocaleDateString();
+document.getElementById("vremeID").innerHTML = datum.toLocaleTimeString();
 var x = 4;
 
 function MyTest(){
@@ -17,17 +19,14 @@ function MyTest(){
 var avion = {
 	ime: 	 "Boeing",
 	prezime: "747"
-	printInfo: function() {
-		document.write("ovo je avion");
-	}
+	
 	
 }
 
 
 
 function Datum() {
-	var datum = new Date();
-	document.getElementById("datumiID").innerHTML = datum.toLocaleTimeString();
+	
 }
 
 

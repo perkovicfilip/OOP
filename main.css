@@ -1,17 +1,66 @@
-html {
-  font-family: Monospace, Monaco;
-  background-color:#dedcdc;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 10;
+	padding: 0;
+	background-color: #24252A;
+}
+
+li, a, button {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	color: #edf0f1;
+	text-decoration: none;
 }
 
 header {
-	background-color:#e02f2f;
-	border-radius: 10px;
-	
-	padding: 10px 10px;
-	margin: 10px 15;
-	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px, 10%;
 }
 
+.logo {
+	cursor: pointer;	
+	background-color: white;
+	padding: 11px;
+	border-radius: 30px;
+	width: 220px;
+	height: 70px;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: 0088a9;
+}
+
+button {
+	padding: 9px 25px;
+	background-color: rgba(0, 136, 169, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	width: 220px;
+	height: 70px;
+}
+
+button:hover {
+	background-color: rgba(0, 136, 169, 0.8);
+}
 
 section {
 	background-color:#2677e0;	
@@ -81,42 +130,33 @@ p {
 	margin: 10px 15;
 }
 
-/*
-.pocetna_text { 
-	text:#ffffff;
-}
 
 
 
-h3 {
-  color: SlateBlue;
-  text-align: center;
-  
-}
-
-
-h4 {
-  color: Violet;
-  margin-left: 200px;
-}
-
-p {
-  background-color: LightGray;
-  border-style: solid;
-
-
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-right: 200px;
-  margin-left: 200px;
-}
 
 
 
-.klasa {
-  background-color:Tomato
-}
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
