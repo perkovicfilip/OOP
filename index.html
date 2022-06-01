@@ -1,120 +1,89 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset = "UTF8">
     <title>Aerodrom Srbija</title>
     <link rel="stylesheet" href="main.css">
-	<script src="main.js"></script>
-	
+    <script src="main.js"></script>
   </head>
   
   <body>
-	<header>
-		<img src="img/avion.jpg" alt="Avion" width="50" height="50">
-		
-		<nav>
-			<ul class ="footer_lista">
-				<li> <a href="destinacije.html">Destinacije</a> </li>
-				<li> <a href="kontakt.html">Kontakt</a> </li>
-				<li> <a href="prijava.html">Prijavite se</a> </li>
-			</ul>
-		</nav>	
-		
-			<p>Datum: <span id="datumID"></span></p>
+	  <header>	
+      <img class="logo" src="img/logo.png" alt="Avion">		
+      <nav>
+        <div class="nav-left">
+          <ul class="nav_ul">
+            <li class="nav_li"><a class="nav_a" href="index.html">Pocetna</a></li>
+            <li class="nav_li"><a class="nav_a" href="rezervacija.html">Rezervacija</a></li>
+            <li class="nav_li"><a class="nav_a" href="destinacije.html">Destinacije</a></li>
+            <li class="nav_li"><a class="nav_a" href="specijalnePonude.html">Specijalne ponude</a></li>
+            <li class="nav_li"><a class="nav_a" href="leteciPark.html"> Naš leteci park</a></li>
+            <li class="nav_li"><a class="nav_a" href="kontakt.html">Kontakt</a></li>
+            <li class="nav_li"><a class="nav_a" href="newsletter.html">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="nav-right"> 
+          <a href="prijava.html">Prijava</a>
+        </div>
+      </div>			
+    </header>	
+    <br><br><br><br>    
+    
+    
 
-		<script>
-			var datum = new Date();
-			document.getElementById("datumID").innerHTML = datum.toLocaleDateString();
-		</script>
-		
-			<p>Vreme: <span id="vremeID"></span></p>
+    <div>
+      <h2 class="naslov_destinacije">Popularne destinacije</h2>      
+      <div class="destinacije">
+        <img class="dest_slike" src="img/pula.jpg">
+        <img class="dest_slike" src="img/cirih.jpg">
+        <img class="dest_slike" src="img/moskva.jpg">
+        <img class="dest_slike" src="img/atina.jpg">
+        <img class="dest_slike" src="img/pariz.jpg">
+      </div>    
+      <div class="naslov_slika">
+        <h3>Pula</h3> 
+        <h3>Cirih</h3>
+        <h3>Moskva</h3>
+        <h3>Atina</h3>
+        <h3>Pariz</h3>
+      </div>
+    </div>
 
-		<script>			
-			document.getElementById("vremeID").innerHTML = datum.toLocaleTimeString();
-		</script>
-	</header>
-	
-	<section>
-	
-		<main class="main_container">
-		
-			<div class="home_item">			
-				<h2>Destinacija 1</h2>
-				<p>Majami</p>
-				<a href="https://www.instagram.com/airserbia/#">LINK</a>
-			</div>
-			
-			<div class="home_item">			
-				<h2>Destinacija 2</h2>
-				<p>Zagreb</p>
-				<button type ="button" onclick="testFunction()">Klikni</button>
-			</div>
-			
-			<div class="home_item">			
-				<h2>Destinacija 3</h2>
-				<p>Sarajevo</p>
-				<p id="datumiID">Datum:  </p>
-				<p id = "test">
-				...
-				<p>
-			</div>
-			
-		</main>
-		
-		<script>
-			document.getElementById("test").innerHTML = "CAO";
-		</script>
-		
-		
-		
-		<p class ="pocetna_text">
-			Dobrodosli na aerodrom, srecno putavanje! 
-		</p>		
-		
-	</section>
-	
-	<footer>
-		<ul class ="footer_lista">
-			<li class ="socijalne_mreze"> <a href="https://www.instagram.com/airserbia/#"><img src="img/insta.jpg" alt="Instagram" width="50" height="50"></a>
-			<li class ="socijalne_mreze"> <a href="https://www.facebook.com/airserbia"><img src="img/fb.png" alt="Facebook" width="50" height="50"></a>
-			<li class ="socijalne_mreze"> <a href="https://twitter.com/airserbia"> <img src="img/twitter.png" alt="Twitter" width="50" height="50"></a>
-		</ul>
-	</footer>
-	
-	
-	<script> 
-		MyTest()
-		Datum()
-		testFunction()
-	</script>
-	
-    <!-- <h3>
-      Samanta
-    </h3>
-
-    <p style="background-color:Tomato">
-      Samantha wanted to be famous. The problem was that she had never considered all the downsides to actually being famous. Had she taken the time to objectively consider these downsides, she would have never agreed to publically sing that first song.
-    </p>
-
-    <h4>
-      Samanta doesnt like cats 
-    </h4>
-
-    <p>
-      I don’t like cats and they don’t like me. I used to be allergic to them and I would get stuffed up and have hives. That doesn’t seem to happen anymore. But I still don’t like them. I lived with 3 cats that were not good at peeing in the litter box. They seemed to find something important to me and pee on it. Most of the time they peed on photographs or papers that would be ruined. Cats also bring fleas into the house. There is nothing worse than having to flea dip cats and also flea bomb a home. That is why I don’t like cats.
-    </p>
-
-    <img src="img/slika.jpg" alt="Samanta" width="200" height="200">
-
-    <a href="https://www.samanta.org.in/blog">Samantin blog</a>
-
-		<ul>
-			<li> <a href="www.instagram.com/airserbia">ig</a> </li>
-			<li> <a href="www.facebook.com/airserbia">fb</a> </li>
-			<li> <a href="www.twitter.com/airserbia">twitter</a> </li>
-		</ul>
-
-    <!-- <a href="www.instagram.com"><img src="img/insta.jpg" alt="Instagram od Samante" width="50" height="50"></a> -->
-
+    <footer>
+      <div class="footer_container">
+        <div class="footer1">
+          <div class="footer1_mreze">
+            <h2 class="footer_h2">Socijalne mreze</h2>
+            <ul class="footer_ul">
+              <li class="footer_li">Instagram</li>
+              <li class="footer_li">Facebook</li>
+              <li class="footer_li">Twitter</li>
+              <li class="footer_li">Youtube</li>
+            </ul>
+          </div>          
+          <div class="footer1_placanje">
+            <h2 class="footer_h2">Nacini placanja</h2>
+            <ul class="footer_ul">
+              <li class="footer_li">Visa</li>
+              <li class="footer_li">Mastercard</li>
+              <li class="footer_li">PayPal</li>            
+            </ul>
+          </div>
+          <div class="footer1_3">
+            <div class="footer_input1">
+              <h2 class="footer_h2">Kontakt</h2>
+              <p class="footer_p">email: callcenter@airserbia.com</p>
+              <input type="button" class="btn_footer" onclick="window.location.href='kontakt.html';" value="Pozovi nas">                         
+            </div>            
+            <div class="footer_input2">
+              <h2 class="footer_h2">Newsletter</h2>
+              <p class="footer_p">Budi uvek u toku sa najboljim ponudama!</p>
+              <input type="button" class="btn_footer" onclick="window.location.href='prijava.html';" value="Prijavi se">
+            </div>
+          </div>
+        </div>
+        <div class="footer2">© Air Serbia 2022.</div>
+      </div>
+    </footer>
   </body>
 </html>
