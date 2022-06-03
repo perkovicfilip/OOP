@@ -1,0 +1,66 @@
+
+{
+    "avioni":
+    [ 
+        {
+            "ime": "AIRBUS A 330-200",
+            "kolicina": "1", 
+            "duzina": "57m",
+            "raspon_krila": "60m",
+            "kapacitet": "257",
+            "brzina": "870 km/h",
+            "visina_krstarenja": "12.500 m"	
+        }, 
+    
+        {
+            "ime": "AIRBUS A 320",
+            "kolicina": "1", 
+            "duzina": "37m",
+            "raspon_krila": "35m",
+            "kapacitet": "174",
+            "brzina": "828 km/h",
+            "visina_krstarenja": "11.887 m"	
+        }, 
+    
+        {
+            "ime": "AIRBUS A 319",
+            "kolicina": "9", 
+            "duzina": "33m",
+            "raspon_krila": "35m",
+            "kapacitet": "144",
+            "brzina": "828 km/h",
+            "visina_krstarenja": "11 887 m"	
+        },
+        
+        {
+            "ime": "ATR 72-600",
+            "kolicina": "2", 
+            "duzina": "27m",
+            "raspon_krila": "27m",
+            "kapacitet": "72",
+            "brzina": "510 km/h",
+            "visina_krstarenja": "7600 m"	
+        }, 
+    
+        {
+            "ime": "ATR 72-500",
+            "kolicina": "1", 
+            "duzina": "27m",
+            "raspon_krila": "27m",
+            "kapacitet": "70",
+            "brzina": "510 km/h",
+            "visina_krstarenja": "7600 m"	
+        }, 
+    
+        {
+            "ime": "AIRBUS A 319",
+            "kolicina": "2", 
+            "duzina": "27m",
+            "raspon_krila": "27m",
+            "kapacitet": "66",
+            "brzina": "510 km/h",
+            "visina_krstarenja": "7600 m"	
+        }
+    ]
+}
+    
