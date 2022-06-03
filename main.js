@@ -1,84 +1,4 @@
-/*const para = document.createElement("p");
-const node = document.createTextNode("This is a paragraph.");
-var divDole = document.getElementById("div1");
-var glavniDiv = document.getElementById("DIV5");
-
-para.appendChild(node);
-glavniDiv.appendChild(para);
-glavniDiv.appendChild(divDole);
-
-document.body.insertBefore(divDole, para );
-*/
-function prikazi_Avione() {
-	main_div = document.createElement("div");
-	main_div.className = "id_main_div";
-
-	roditelj = document.getElementById("avioni_main");
-	btn_div = document.getElementById("btn_avion_display");
-	footer_av = document.getElementById("footer_avioni");
-	roditelj.appendChild(btn_div);
-	//roditelj.appendChild(main_div);
-	
-
-
-	div1 = document.createElement("div");
-	div2 = document.createElement("div");
-	div3 = document.createElement("div");
-	div4 = document.createElement("div");
-	div5 = document.createElement("div");
-	div6 = document.createElement("div");
-
-	div1.className="main_div_sub";
-	div2.className="main_div_sub";
-	div3.className="main_div_sub";
-	div4.className="main_div_sub";
-	div5.className="main_div_sub";
-	div6.className="main_div_sub";
-
-	main_div.appendChild(div1);
-	main_div.appendChild(div2);
-	main_div.appendChild(div3);
-	main_div.appendChild(div4);
-	main_div.appendChild(div5);
-	main_div.appendChild(div6);
-	
-	document.body.insertBefore(main_div, footer_av);
-
-	napuni_div(0);
-}
-
-function napuni_div(i) {	
-	text = document.createElement("p");	
-	text.innerText = avioni[i].ime  + "\n" + "\n" + avioni[i].kolicina + "\n";
-	text.innerText += "\n" + avioni[i].kolicina + "\n";
-	text.innerText += "\n" + avioni[i].duzina;
-	text.innerText += "\n" + avioni[i].raspon_krila;
-	text.innerText += "\n" + avioni[i].kapacitet;
-	text.innerText += "\n" + avioni[i].brzina;
-	text.innerText += "\n" + avioni[i].visina_krstarenja;
-	div1.appendChild(text);
-}
-
-
-
-
-
-/*
-<div id="DIV5">
-        <div id="div1" class="avion_podaci">
-            <img src="img/avion.png">
-            <h4 id="ime_avion"></h4>
-            <p id="kolicina" class="avion_opis">kolicina: </p>            
-            <p id="duzina" class="avion_opis">duzina: </p>
-            <p id="raspon_krila" class="avion_opis">raspon krila: </p>
-            <p id="kapacitet" class="avion_opis">kapacitet: </p>
-            <p id="brzina" class="avion_opis">brzina: </p>
-            <p id="visina_krstarenja" class="avion_opis">visina krstarenja: </p>
-        </div>  
-    </div>
-*/
-
-var avioni = 
+/*var avioni = 
 [ 
 	{
 		ime: "AIRBUS A 330-200",
@@ -139,19 +59,104 @@ var avioni =
 		brzina: "510 km/h",
 		visina_krstarenja: "7600 m"	
 	}, 
-]
+]*/
+var avioni;
+var div_avioni = [];
+var avioni_src = ["img/avion1.png", "img/avion2.png", "img/avion1.png", 
+				  "img/avion2.png", "img/avion1.png", "img/avion2.png"
+];
 
-/*function avionIspisPodaci() {
-	for(var i = 0; i < 6; i++) {
-		document.getElementById("ime_avion").innerHTML += avioni[i].ime;
-		document.getElementById("kolicina").innerHTML += avioni[i].kolicina;
-		document.getElementById("duzina").innerHTML += avioni[i].duzina;
-		document.getElementById("raspon_krila").innerHTML += avioni[i].raspon_krila;
-		document.getElementById("kapacitet").innerHTML += avioni[i].kapacitet;
-		document.getElementById("brzina").innerHTML += avioni[i].brzina;
-		document.getElementById("visina_krstarenja").innerHTML += avioni[i].visina_krstarenja;
+
+var br_click = 0;
+
+function prikazi_Avione() {
+	
+	br_click++;
+
+	if(br_click % 2 == 1) {
+		document.getElementById("btn_avioni").value = "Zatvori";
+		prikaz();
+	}
+	else {
+		document.getElementById("btn_avioni").value = "Prikazi";
+		zatvori();
+
+	}
+	function prikaz() {
+
+		main_div = document.createElement("div");
+		main_div.className = "class_main_div";
+		main_div.id ="id_main_div";
+
+		roditelj = document.getElementById("avioni_main");
+		btn_div = document.getElementById("btn_avion_display");
+		footer_av = document.getElementById("footer_avioni");
+		roditelj.appendChild(main_div);
+		
+
+		div_avioni[0] = document.createElement("div");
+		div_avioni[1] = document.createElement("div");
+		div_avioni[2] = document.createElement("div");
+		div_avioni[3] = document.createElement("div");
+		div_avioni[4] = document.createElement("div");
+		div_avioni[5] = document.createElement("div");
+
+		div_avioni[0].className="main_div_sub";
+		div_avioni[1].className="main_div_sub";
+		div_avioni[2].className="main_div_sub";
+		div_avioni[3].className="main_div_sub";
+		div_avioni[4].className="main_div_sub";
+		div_avioni[5].className="main_div_sub";
+
+		main_div.appendChild(div_avioni[0]);
+		main_div.appendChild(div_avioni[1]);
+		main_div.appendChild(div_avioni[2]);
+		main_div.appendChild(div_avioni[3]);
+		main_div.appendChild(div_avioni[4]);
+		main_div.appendChild(div_avioni[5]);
+		
+		document.body.insertBefore(main_div, footer_av);
+
+		for(var i = 0; i < 6; i++) {
+			napuni_div(i);
+		}
 	}	
-}*/
+
+	function zatvori() {
+		roditelj.appendChild(main_div);
+		roditelj.removeChild(main_div);
+	}
+}
+
+function napuni_div(i) {
+	
+	text = document.createElement("p");
+	h3 = document.createElement("h3");	
+	img = document.createElement("img");
+	img.src = avioni_src[i];	
+	
+	div_avioni[i].appendChild(img);
+	div_avioni[i].appendChild(h3);
+
+	
+	h3.innerText = avioni[i].ime;
+	text.innerHTML = "\n" + avioni[i].kolicina;	
+	text.innerHTML = "\n" + avioni[i].duzina;
+	text.innerText += "\n" + avioni[i].raspon_krila;
+	text.innerText += "\n" + avioni[i].kapacitet;
+	text.innerText += "\n" + avioni[i].brzina;
+	text.innerText += "\n" + avioni[i].visina_krstarenja;
+	div_avioni[i].appendChild(text);
+}
+
+fetch('./data.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {	
+	avioni = data['avioni'];   
+  })
+ 
 
 /*function napravi_div() {
 	const mojDiv = document.createElement("div");
