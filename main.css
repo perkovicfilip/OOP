@@ -222,6 +222,28 @@ input[type=text], input[type=password] {
   color: #333;
 }
 
+.btn_avioni {
+  display: flex;
+  justify-content: center;
+  margin: 150px;
+}
+
+.id_main_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.main_div_sub {
+  background-color: green;
+  height: 100px;
+}
+
+
+
+
 
 
 
