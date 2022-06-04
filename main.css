@@ -330,6 +330,53 @@ input[type=text], input[type=password] {
 }
 
 
+/*PISMENI*/
+
+
+.div1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div1_1 {
+  background-color: green;
+  height: 200px;
+  width: 25%;
+}
+
+.div1_2 {
+  background-color: blue;
+  height: 200px;
+  width: 25%;
+}
+
+.div1_3 {
+  background-color: red;
+  height: 200px;
+  width: 25%;
+}
+
+.span_pismeni {
+  background-color: red;
+  display: inline-block;
+  margin: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px;
+  transition: opacity 0.5s;
+}
+
+.span_pismeni:hover {
+  opacity: 0.8;
+}
+
+.div2 {
+  display: block;
+  height: 200px;
+  background-color: greenyellow;
+}
+
 
 
 

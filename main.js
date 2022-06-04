@@ -1,3 +1,170 @@
+/*PISMENI*/
+var pismeni_json = 
+[
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "bs": "harness real-time e-markets"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net",
+      "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": {
+        "street": "Douglas Extension",
+        "suite": "Suite 847",
+        "city": "McKenziehaven",
+        "zipcode": "59590-4157",
+        "geo": {
+          "lat": "-68.6102",
+          "lng": "-47.0653"
+        }
+      },
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info",
+      "company": {
+        "name": "Romaguera-Jacobson",
+        "catchPhrase": "Face to face bifurcated interface",
+        "bs": "e-enable strategic applications"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "suite": "Apt. 692",
+        "city": "South Elvis",
+        "zipcode": "53919-4257",
+        "geo": {
+          "lat": "29.4572",
+          "lng": "-164.2990"
+        }
+      },
+      "phone": "493-170-9623 x156",
+      "website": "kale.biz",
+      "company": {
+        "name": "Robel-Corkery",
+        "catchPhrase": "Multi-tiered zero tolerance productivity",
+        "bs": "transition cutting-edge web services"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "suite": "Suite 351",
+        "city": "Roscoeview",
+        "zipcode": "33263",
+        "geo": {
+          "lat": "-31.8129",
+          "lng": "62.5342"
+        }
+      },
+      "phone": "(254)954-1289",
+      "website": "demarco.info",
+      "company": {
+        "name": "Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"
+      }
+    }
+];
+
+
+
+  
+
+
+function promeniText() {
+	var p_div2 = document.getElementById("pismeni_p");
+	for(var i = 0; i < pismeni_json[0].length; i++) {
+		p_div2.innerHTML += pismeni_json[i];
+	}
+	//posto ovo ne radi, a sve je dobro
+	//promenicu text iz div2 na nesto drugo sto nije iz json
+	var text_za_div2 = "dobrodosli na aerodrom!";
+	p_div2.innerHTML = text_za_div2;
+
+}
+
+function drugiZadatak() {
+	for(var i = 0; i < pismeni_json.length; i++) {
+		var p = document.createElement("p");
+		var div2 = document.getElementById("divv2");
+		p.innerHTML = pismeni_json[i];
+		div2.appendChild(p);
+	}
+}
+
+drugiZadatak();
+
+
+/* 
+NE RADI MI KADA SE JSON KOPIRA U JS, RADICU PREKO JSON FILE DA GA UCITAM POMOCU FETCHA,
+CEO JSON CU UCITATI U PROMENLJIVU pismeni_json
+ */
+
+/*fetch('./pismeni.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((pismeni) => {	
+	pismeni_json = pismeni['d'];   
+  })
+*/
+
+
+
+
+
 /*var avioni = 
 [ 
 	{
@@ -149,13 +316,13 @@ function napuni_div(i) {
 	div_avioni[i].appendChild(text);
 }
 
-fetch('./data.json')
+/*fetch('./data.json')
   .then((response) => {
     return response.json()
   })
   .then((data) => {	
 	avioni = data['avioni'];   
-  })
+  })*/
  
 
 /*function napravi_div() {
@@ -234,6 +401,9 @@ function Datum() {
 	var datum = new Date();
 	document.getElementById("datumiID").innerHTML = datum.toLocaleTimeString();
 }*/
+
+
+
 
 
 
